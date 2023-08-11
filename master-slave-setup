@@ -13,7 +13,7 @@ yum install docker
  
 Now to create pioeline job  --to build docker image to push that image to our docker registry -using developers code from git hub:
 we neet to set up gobal credentilas for git hub and docker.
-
+Go to manage jenkin -pluggins-available pluggin-type docker---seclect first 3 puggins i.e docker.docker commas,docker pupeline and install it.
 Go to -jenkin ui-manage jenkin-credentials-system-global credentills--add credentials--
 First do for git hub i.e
 username-bhavya630@gmail.com  passsword(type)--id (git-credentials)-create
@@ -22,3 +22,5 @@ username-bhavya630@gmail.com  passsword(type)--id (git-credentials)-create
  CREATE A JOB:
  dashboard-new-choose pipeliine-ok.
  Next section--under pipeline type script or copy from my github-rps-ant repo-user file pipelinescript-then build it.
+If success--then check youe ece-type docker images...
+go to youe docker registry---pushed images you can see there....
