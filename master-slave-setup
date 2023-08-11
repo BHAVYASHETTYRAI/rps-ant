@@ -39,11 +39,19 @@ lick on add--copy paste your pem key---add---host key verification-non---availab
 
 
 Next install docker in your ubuntu using link  https://docs.docker.com/engine/install/ubuntu/
+sudo docker images (see comand will works or not)
 
 Next create pipeline job---as above ---copy pasre pipelinescript from my ant-aps repo 
 do the changes in agent any lines 
 delet lines and fill folowing 
 thenk build it
 
+You can see below error line in your console output...
+
+then execute below command and build it....
+
+sudo chmod 777 /var/run/docker.sock
+again build
+now you can see the generated images in your slave machine using command  docker images...also you can see it in your docker registry.
 
 
