@@ -1,0 +1,24 @@
+launch ec2
+install jenkins using jenkins i.o
+yum install git
+y
+yum install docker
+ sudo usermod -aG docker jenkins
+ sudo systemctl enable docker
+ systemctl restart docker
+ systemctl status docker
+ systemctl restart jenkins
+ hit pubip of jenkin server:8080 ===jenkin ui will open
+ configure it
+ 
+Now to create pioeline job  --to build docker image to push that image to our docker registry -using developers code from git hub:
+we neet to set up gobal credentilas for git hub and docker.
+
+Go to -jenkin ui-manage jenkin-credentials-system-global credentills--add credentials--
+First do for git hub i.e
+username-bhavya630@gmail.com  passsword(type)--id (git-credentials)-create
+ second do it for your docker registry
+ add credentials-username-bhavyashettyrai-password(type)-id-docker-credentials-create.
+ CREATE A JOB:
+ dashboard-new-choose pipeliine-ok.
+ Next section--under pipeline type script or copy from my github-
