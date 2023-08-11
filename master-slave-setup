@@ -24,3 +24,26 @@ username-bhavya630@gmail.com  passsword(type)--id (git-credentials)-create
  Next section--under pipeline type script or copy from my github-rps-ant repo-user file pipelinescript-then build it.
 If success--then check youe ece-type docker images...
 go to youe docker registry---pushed images you can see there....
+
+Till here master set-up...
+Now launch one more ec2----use ubuntu--launch it--as a jenkin slave to make master slave configeration.
+connect ubuntu and run following command....
+sudo apt-get update
+sudo apt-get install openjdk-11-jdk
+
+Lets do connection between master jenkin and slave jenkin :
+ Dashboard-manage jenkins-node and cloud -add new node -name (jenkins-slave) -  permanent - create
+remote root ( /home/ubuntu/jenkins) - label ( jenkins-slave) - launch method (ssh) -- 
+host (pvt ip of slave ) - credentials ---add--jenkins --domain(global credentials )--kind (ssh username with private key) id (jenkins-slave)--username(ubuntu)
+lick on add--copy paste your pem key---add---host key verification-non---availability (keep this as much as ossibe) ---save
+
+
+Next install docker in your ubuntu using link  https://docs.docker.com/engine/install/ubuntu/
+
+Next create pipeline job---as above ---copy pasre pipelinescript from my ant-aps repo 
+do the changes in agent any lines 
+delet lines and fill folowing 
+thenk build it
+
+
+
